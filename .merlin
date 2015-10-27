@@ -1,0 +1,6 @@
+S .
+B .
+PKG batteries
+PKG lwt
+PKG curl
+PKG yojson

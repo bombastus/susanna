@@ -1,0 +1,7 @@
+#require "batteries";;
+#require "curl";;
+#require "lwt.unix";;
+#require "netstring";;
+#require "yojson"
+#load "ocurl_util.cmo";;
+

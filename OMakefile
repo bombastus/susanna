@@ -1,0 +1,35 @@
+# General config
+OCAMLC = ocamlc
+OCAMLCFLAGS = -thread -warn-error -a
+BYTE_ENABLED = true
+NATIVE_ENABLED = false
+
+USE_OCAMLFIND = true
+
+MY_SUBSYSTEMS = data
+.SUBDIRS: $(MY_SUBSYSTEMS)
+
+# OCAMLPACKS[] = lwt sqlite3# # #  batteries
+
+# MAIN_PROGRAM = build/susanna
+
+# MAIN_FILES[] = daemon
+
+# .DEFAULT: $(OCamlProgram $(MAIN_PROGRAM), $(MAIN_FILES))
+
+
+# oget program
+OGET_PROGRAM = build/oget
+OGET_FILES[] = ocurl_util oget 
+OCAMLPACKS[] = lwt.unix netclient curl
+
+.DEFAULT: $(OCamlProgram $(OGET_PROGRAM), $(OGET_FILES))
+
+
+# PROGRAM = test
+
+# FILES[] = test graph
+
+# .PHONY: test
+
+# test: $(OCamlProgram $(PROGRAM), $(FILES))
